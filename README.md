@@ -1,0 +1,1 @@
+This is a delivery app design for a bakery shop including Login/Sign up form, Admin frame and User frame, using GUI in JavaSE, and Mysql for database. I worked this project out as my third year CEIT software project with my friend(my classmate).
