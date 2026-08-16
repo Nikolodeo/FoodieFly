@@ -1,0 +1,24 @@
+create database foodiefly;
+use foodiefly;
+
+create table logintable(userID int not null auto_increment, Name varchar(30) not null,
+Password varchar(30) not null, Email varchar(30) not null, PhoneNumber varchar(30), 
+Address varchar(30), userType varchar(10) not null, primary key(userID));
+
+
+create table itemtable(itemID int not null auto_increment, itemName varchar(30) not null,
+itemPrice int not null, Catagory varchar(30) not null, description varchar(50) not null,
+status varchar(15) not null, primary key(itemID));
+
+
+create table carttable(ID int not null auto_increment, userName varchar(30) not null,
+total_cost int not null, status1 varchar(10) not null, primary key(ID));
+
+
+create table producttable(productID int not null auto_increment, productName varchar(50) not null,
+quantity int not null, cartID int not null, primary key(productID), 
+foreign key(cartID) references carttable(ID));
+
+
+create table feedback(ID int not null auto_increment, userName varchar(30) not null,
+rating int not null, comment varchar(500), primary key(ID));
